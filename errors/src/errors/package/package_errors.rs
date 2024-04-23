@@ -370,4 +370,10 @@ create_messages!(
         help: None,
     }
 
+    @backtraced
+    invalid_file_name_dependency {
+        args: (name: impl Display),
+        msg: format!("The dependency program name `{name}` is invalid."),
+        help: Some("Aleo program names must only contain lower case letters, numbers and underscores.".to_string()),
+    }
 );
